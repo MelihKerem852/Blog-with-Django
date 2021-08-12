@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+  <div class="row" style="margin-left:50px;">
+                <div class="col-lg-11">
+                    <!-- Post content-->
+                    <article>
+                        <!-- Post header-->
+                        <header class="mb-4">
+                            <!-- Post title-->
+                            <h2 class="fw-bolder mb-1">{{article.title}}</h2>
+                            <hr color="white"/>
+                             <!--Author-->
+                            <p class="lead">
+                                 {{article.author.username}} tarafından yayımlandı
+                            </p>
+                            <!-- Post meta content-->
+                            <div class="text-muted fst-italic mb-2">{{article.created_date}}'da paylaşıldı</div>
+                           
+                                                        <hr color="white"/>
+                        </header>
+                        <!-- Preview image figure-->
+                        {% if article.article_image %}
+                            <figure class="mb-4"><img class="img-fluid rounded" src="{{article.article_image.url}}" alt="..." /></figure>
+
+                        
+                        {% endif %}
+                        <!-- Post content-->
+                        <section class="mb-5" style="color:wihte;">
+                          <p style="color: white;">{{article.content|safe}}</p> 
+                        </section>
+                    </article>
+                 {% if comments %}
+      {% for comment in comments  %}
+        <div class="media mb-4">
+          <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+          <div class="media-body">
+            <h5 class="mt-0">{{comment.comment_author}}</h5>
+            {{comment.comment_date}} <br>
+            {{comment.comment_content}}
+          </div>
+        </div>
+      {% endfor %}
+      
+      
+      {% else %}
+      <div class ="alert alert-danger">
+        Bu makaleye herhangi bir yorum yazılmamış,ilk yorum yapan siz olun!
+      </div>
+      {% endif %}
+      <div class="card my-4">
+          <h5 class="card-header"style="background-color:#242424; color:white;">Yorum Ekle:</h5>
+          <div class="card-body"style="background-color:#363636">
+            <form method = "post" style ="color:white" action = "{% url 'article:comment' article.id %}" >
+              {% csrf_token %}
+              <div class="form-group">
+                  <label for="formGroupExampleInput">İsim</label>
+                  <input name = "comment_author" type="text" class="form-control" id="formGroupExampleInput" placeholder="İsminizi girin">
+                </div>
+              <div class="form-group">
+                  <label for="formGroupExampleInput">Yorum</label>
+                <textarea name = "comment_content" class="form-control" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-danger">Ekle</button>
+            </form>
+          </div>
+        </div>
+        </div>
+        
+      </div>
+                </div>
+
+            </div>                
+
+                    
+                    
+          
+       
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+
+
+
+{% endblock body %}

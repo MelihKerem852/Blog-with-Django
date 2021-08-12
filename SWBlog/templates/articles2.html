@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+{% if articles %}
+    {% for article in articles %}
+    
+            <div class="row" style="margin-left:50px;">
+                            <div class="col-lg-11">
+                                <!-- Post content-->
+                                <article>
+                                    <!-- Post header-->
+                                    <header class="mb-4">
+                                        <!-- Post title-->
+                                        <a href="{% url 'article:detail' article.id%}"> <h2 class="fw-bolder mb-1">{{article.title}}</h2></a>
+                                        <hr color="white"/>
+                                        <!--Author-->
+                                        <p class="lead">
+                                            {{article.author.username}} tarafından yayımlandı
+                                        </p>
+                                        <!-- Post meta content-->
+                                        <div class="text-muted fst-italic mb-2">{{article.created_date}}'da paylaşıldı</div>
+                                    
+                                                                    <hr color="white"/>
+                                    </header>
+                                    <!-- Preview image figure-->
+                                    {% if article.article_image %}
+                                        <figure class="mb-4"><a href="{% url 'article:detail' article.id%}"><img class="img-fluid rounded" src="{{article.article_image.url}}" alt="..." /></a>  </figure>
+
+                                    
+                                    {% endif %}
+                                    <!-- Post content-->
+                                    <section class="mb-5" style="color:wihte;">
+                                    <p style="color: white;">{{article.content|safe|truncatewords:150}}</p> 
+                                    <a href="{% url 'article:detail' article.id%}" style="float:right;" class ="btn btn-danger">Devamını Oku...</a>
+                                    </section>
+                                </article>
+                                
+                            </div>
+            </div>         
+                                    
+            <hr color="white"/>       
+            <br>
+            <br>
+    {% endfor %}
+{% else %}
+<div class ="alert alert-danger">Bu Blogta Henüz Bir Makale Bulunmamaktadır</div>
+{% endif %}
+ 
+
+{% endblock body %}
