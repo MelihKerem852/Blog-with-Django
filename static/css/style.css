@@ -1,0 +1,55 @@
+body{
+  background-color: white;
+}
+h1{
+  color: black; 
+
+}
+h2{
+  color:black;
+}
+h3{
+   color: black; 
+}
+p{
+  color: black; 
+
+}
+label{
+  color: black;
+}
+a{
+  color: black;
+  text-decoration:none;
+}
+a:hover{
+  color: rgb(94, 94, 94)
+}
+#register-form{
+  width: 10rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+#login-form{
+  width: 10rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+#training{
+  color: #fff;
+  padding: 1rem;
+}
+#training .items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#training .items .item{
+  text-align: center;
+  padding: 0.5rem;
+  width: 33%;
+}
+#training .items .item:hover{
+  color: rgb(177, 177, 177);
+  opacity: 0.6;
+}

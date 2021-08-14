@@ -49,10 +49,10 @@
         Bu makaleye herhangi bir yorum yazılmamış,ilk yorum yapan siz olun!
       </div>
       {% endif %}
-      <div class="card my-4">
-          <h5 class="card-header"style="background-color:#242424; color:white;">Yorum Ekle:</h5>
-          <div class="card-body"style="background-color:#363636">
-            <form method = "post" style ="color:white" action = "{% url 'article:comment' article.id %}" >
+      <div class="card my-4" style="background-color: #bebebe ">
+          <h5 class="card-header">Yorum Ekle:</h5>
+          <div class="card-body">
+            <form method = "post"  action = "{% url 'article:comment' article.id %}" >
               {% csrf_token %}
               <div class="form-group">
                   <label for="formGroupExampleInput">İsim</label>

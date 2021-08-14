@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#062e51; height:4rem">
   <a class="navbar-brand" href="/">SWBlog</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -13,9 +13,7 @@
       <!--<li class="nav-item">
         <a class="nav-link" href="{% url 'about'%}">Hakkımda</a>
       </li>-->
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'article:articles' %}">Bütün Makaleler</a>
-      </li>
+      
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Nedir?
@@ -31,8 +29,12 @@
         <a class="nav-link link" href="/articles/article/19">Bir Web Sitesinde Neler Olmalı?</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="{% url 'article:articles' %}">Bütün Makaleler</a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="{% url 'article:articles2' %}">Makaleler</a>
       </li>
+      
     </ul>
 
     <ul class="navbar-nav ml-auto">

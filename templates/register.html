@@ -2,18 +2,25 @@
 {% load crispy_forms_tags %}
 
 {% block body %}
-    
-<div class="row">
-  <div class="col-md-6 offset-md-3">  
-  <h3>Kayıt Ol</h3>
-    <form method="POST">
-    {% csrf_token %}
+<div class="container border span-3 p-5" style="background-color: #f2f2f2">     
+  <div class="row">
+    <div class="col-md-6 offset-md-3"> 
+     <div class="conainer" id="register-form">
+      <h3>Kayıt Ol</h3>
+     </div>  
+      <form method="POST">
+      {% csrf_token %}
 
-    {{form|crispy}}
-    <br>
-    
-    <button type="submit" class="btn btn-danger" style ="width:8rem; margin-left: 13rem;">Kayıt Ol</button>
-    </form>
-    </div>
+      {{form|crispy}}
+      <br>
+      
+      <button type="submit" class="btn btn-danger" style ="width:8rem; margin-left: 13rem;">Kayıt Ol</button>
+      </form>
+      </div>
+  </div>
 </div>
+<br>
+<br><br><br><br><br><br><br><br><br><br>
+
+
 {% endblock %}

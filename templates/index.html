@@ -1,8 +1,95 @@
 {% extends 'layout.html' %}
+{% load static %}
 {% block body %}
-<div class="jumbotron text-center" style="background-color: rgba(255, 255, 255, 0.2); margin-left: 50px;">
-    <h3>SWBlog | Anasayfa</h3>
-    <p>Hoşgeldiniz</p>
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner rounded">
+      <div class="carousel-item active rounded">
+        <a href="/articles/article/14"><img class="d-block w-100 rounded" src="{% static 'img/site_icin.jpg' %}" alt="First slide"></a>
+      </div>
+      <div class="carousel-item rounded" >
+        <a href="/articles/article/12"><img class="d-block w-100 rounded" src="{% static 'img/site_icin2.jpg' %}" alt="Second slide"></a>
+      </div>
+      <div class="carousel-item rounded">
+        <a href="/articles/article/19"><img class="d-block w-100 rounded" src="{% static 'img/site_icin3.png' %}" alt="Third slide"></a>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
 </div>
+
+
+
+{% endblock %}
+
+
+{% block body2 %}
+<section id="training" class="bg-dark-blue" style="background-color: #155b97;  padding: 1rem;">
+  <h3 class="text-center heding-madium" style ="color:whitesmoke;">Öne Çıkanlar</h3>
+  <div class="items" style="display: flex;
+  justify-content: space-between;
+  align-items: center;">
+      <article class="item"style="text-align: center;padding: 0.5rem;width: 33%;">
+          <i class="fa fa-pencil-alt"></i>
+         <a href="/articles/article/20"style="text-decoration:none; "><h3 style ="color:whitesmoke;">Bootstrap Nedir?</h3></a>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio temporibus, laboriosam facere a delectus aperiam maiores, nemo velit beatae ducimus voluptatum est dolorum ab ratione sint obcaecati nisi architecto saepe harum hic nulla dicta minima id quasi? Pariatur doloribus hic atque a inventore quam. Eum reiciendis iure impedit? Quis, perferendis.</p>
+      </article>
+      <article class="item"style="text-align: center;padding: 0.5rem;width: 33%;">
+          <i class="fa fa-pencil-alt"></i>
+          <a href="/articles/article/11"style="text-decoration:none; "><h3 style ="color:whitesmoke;">Python Nedir?</h3></a>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum earum tenetur voluptates doloribus assumenda eveniet, consectetur id fugit autem illum reiciendis sit repudiandae asperiores corrupti culpa eum exercitationem quis atque eius dolorem nesciunt. Repellendus, sint vitae. Rem quia mollitia eveniet autem, dolorum perspiciatis esse iste nam libero! Aliquam, necessitatibus numquam!</p>
+      </article> <article class="item"style="text-align: center;padding: 0.5rem;width: 33%;">
+          <i class="fa fa-pencil-alt"></i>
+          <a href="/articles/article/21"style="text-decoration:none; "><h3 style ="color:whitesmoke;">Django Nedir?</h3></a>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis facere eius a quis maxime fuga alias, eum soluta vitae minus deserunt? Commodi exercitationem dolores eveniet enim architecto, impedit dolorem deserunt corrupti beatae. Asperiores voluptatum itaque quos. Consectetur, laboriosam quaerat. Amet consequatur eveniet quis. Error, est laboriosam. Obcaecati ea voluptatum repudiandae!</p>
+      </article>
+      </div>
+</section>
+<div id="cards-section" style ="color:#fff;padding:4rem;">
+<div id="cards" style="display:flex; justify-content:space-between;align-items:center; ">
+  <div class="card " style="text-align: center;padding: 0.5rem;width: 33%; margin: 0 4rem 0 4rem;">
+    <img class="card-img-top " src="{% static 'img/W3Schools_logo.svg.png'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="color:black">W3Schools</h5>
+      <p class="card-text">Yaptığınız Araştırmları Bu Blogda Yayımlayabilir,Diğer Yazılım Geliştiricilerinin Araştırmalarını, Kod Örneklerini, Ve Yorumlarını Okuyup Kendinizi Geliştirebilirsiniz!</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+  <div class="card " style="text-align: center;padding: 0.5rem;width: 33%;margin: 0 4rem 0 4rem;">
+    <img class="card-img-top" src="{% static 'img/freecodecamp.jpg'%}" alt="Card image cap"> 
+    <div class="card-body">
+      <h5 class="card-title" style="color:black">FreeCodeCamp</h5>
+      <p class="card-text">Yaptığınız Araştırmları Bu Blogda Yayımlayabilir,Diğer Yazılım Geliştiricilerinin Araştırmalarını, Kod Örneklerini, Ve Yorumlarını Okuyup Kendinizi Geliştirebilirsiniz!</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <div class="card " style="  text-align: center;padding: 0.5rem;width: 33%;margin: 0 4rem 0 4rem;">
+    <img class="card-img-top" src="{% static 'img/github.png'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="color:black">GitHub</h5>
+      <p class="card-text">Yaptığınız Araştırmları Bu Blogda Yayımlayabilir,Diğer Yazılım Geliştiricilerinin Araştırmalarını, Kod Örneklerini, Ve Yorumlarını Okuyup Kendinizi Geliştirebilirsiniz!</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<section class="footer">
+  <div id="footer" style="height: 4rem;width:100% ;background-color:#062e51; ">
+      <p class="text-center" style="color: whitesmoke; padding-top:1.1rem; ">Telif Hakkı © 2020-2021 MKCBlog. Tüm Hakları Saklıdır.</p>
+  </div>
+
+</section>
+
+
+
 
 {% endblock %}
