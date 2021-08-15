@@ -1,6 +1,6 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#062e51; height:4rem">
-  <a class="navbar-brand" href="/">SWBlog</a>
+<nav id ="navbar" class="navbar navbar-expand-lg navbar-dark ">
+  <a class="navbar-brand" href="/">MKCBlog</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -37,14 +37,14 @@
       
     </ul>
 
-    <ul class="navbar-nav ml-auto">
+    <ul id="nav-list" class="navbar-nav ml-auto">
     {% if request.user.is_authenticated %}
-      <li class="nav-item active"><a href="{% url 'article:dashboard' %}" style="margin:5px 10px; color:white; text-decoration:none;">Konrol Paneli</a></li>
-      <li class="nav-item active"><a href="{% url 'user:logout' %}" style="margin:5px 10px; color:white; text-decoration:none;">Çıkış Yap</a></li>
+      <li class="nav-item active nav-links"><a href="{% url 'article:dashboard' %}" style="margin:5px 10px; color:white; text-decoration:none;">Konrol Paneli</a></li>
+      <li class="nav-item active nav-links"><a href="{% url 'user:logout' %}" style="margin:5px 10px; color:white; text-decoration:none;">Çıkış Yap</a></li>
      
     {% else %}
-      <li class="nav-item active"><a href="{% url 'user:login' %}" style="margin:5px 10px; color:white; text-decoration:none;">Giriş Yap</a></li>
-      <li class="nav-item active"><a href="{% url 'user:register' %}"style="margin:5px 10px; color:white; text-decoration:none;">Kayıt Ol</a></li>
+      <li class="nav-item active nav-links"><a href="{% url 'user:login' %}" style="margin:5px 10px; color:white; text-decoration:none;">Giriş Yap</a></li>
+      <li class="nav-item active nav-links"><a href="{% url 'user:register' %}"style="margin:5px 10px; color:white; text-decoration:none;">Kayıt Ol</a></li>
     
   {% endif %}
     </ul>

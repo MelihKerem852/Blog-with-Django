@@ -30,12 +30,11 @@
 
 
 {% block body2 %}
-<section id="training" class="bg-dark-blue" style="background-color: #155b97;  padding: 1rem;">
-  <h3 class="text-center heding-madium" style ="color:whitesmoke;">Öne Çıkanlar</h3>
-  <div class="items" style="display: flex;
-  justify-content: space-between;
-  align-items: center;">
-      <article class="item"style="text-align: center;padding: 0.5rem;width: 33%;">
+
+<section id="training" class="bg-dark-blue">
+  <h3 id="one-cikanlar" class="text-center heding-madium">Öne Çıkanlar</h3>
+  <div class="items">
+      <article class="item">
           <i class="fa fa-pencil-alt"></i>
          <a href="/articles/article/20"style="text-decoration:none; "><h3 style ="color:whitesmoke;">Bootstrap Nedir?</h3></a>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio temporibus, laboriosam facere a delectus aperiam maiores, nemo velit beatae ducimus voluptatum est dolorum ab ratione sint obcaecati nisi architecto saepe harum hic nulla dicta minima id quasi? Pariatur doloribus hic atque a inventore quam. Eum reiciendis iure impedit? Quis, perferendis.</p>
@@ -51,40 +50,99 @@
       </article>
       </div>
 </section>
-<div id="cards-section" style ="color:#fff;padding:4rem;">
-<div id="cards" style="display:flex; justify-content:space-between;align-items:center; ">
-  <div class="card " style="text-align: center;padding: 0.5rem;width: 33%; margin: 0 4rem 0 4rem;">
+
+<div id="cards-section">
+  <h3 class="text-center mb-5">Yazılımcılar İçin Web Siteleri</h3>
+
+<div id="cards">
+  <div class="card">
     <img class="card-img-top " src="{% static 'img/W3Schools_logo.svg.png'%}" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title" style="color:black">W3Schools</h5>
+      <h5 class="card-title" >W3Schools</h5>
       <p class="card-text">Yaptığınız Araştırmları Bu Blogda Yayımlayabilir,Diğer Yazılım Geliştiricilerinin Araştırmalarını, Kod Örneklerini, Ve Yorumlarını Okuyup Kendinizi Geliştirebilirsiniz!</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="https://www.w3schools.com" target="_blank" class="btn btn-primary">W3Schools</a>
     </div>
   </div>
 
-  <div class="card " style="text-align: center;padding: 0.5rem;width: 33%;margin: 0 4rem 0 4rem;">
+  <div class="card ">
     <img class="card-img-top" src="{% static 'img/freecodecamp.jpg'%}" alt="Card image cap"> 
     <div class="card-body">
-      <h5 class="card-title" style="color:black">FreeCodeCamp</h5>
+      <h5 class="card-title" >FreeCodeCamp</h5>
       <p class="card-text">Yaptığınız Araştırmları Bu Blogda Yayımlayabilir,Diğer Yazılım Geliştiricilerinin Araştırmalarını, Kod Örneklerini, Ve Yorumlarını Okuyup Kendinizi Geliştirebilirsiniz!</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="https://www.freecodecamp.org"target="_blank" class="btn btn-primary">FreeCodeCamp</a>
     </div>
   </div>
-  <div class="card " style="  text-align: center;padding: 0.5rem;width: 33%;margin: 0 4rem 0 4rem;">
+  <div class="card ">
     <img class="card-img-top" src="{% static 'img/github.png'%}" alt="Card image cap">
     <div class="card-body">
-      <h5 class="card-title" style="color:black">GitHub</h5>
+      <h5 class="card-title">GitHub</h5>
       <p class="card-text">Yaptığınız Araştırmları Bu Blogda Yayımlayabilir,Diğer Yazılım Geliştiricilerinin Araştırmalarını, Kod Örneklerini, Ve Yorumlarını Okuyup Kendinizi Geliştirebilirsiniz!</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="https://github.com" target="_blank" class="btn btn-primary">GitHub</a>
     </div>
   </div>
 
 </div>
 </div>
 
+<hr color="#155b97"/> 
+<br>
+<div class="container">
+<h3 class="text-center mb-5">Web Geliştiricini Yol Haritası</h3>
+<div class="timeline mb-5">
+  <article class="timeline-item">
+    <div class="timeline-desk">
+      <div class="panel">
+    <div class="panel-body">
+  <span class="arrow"></span>
+    <span class="timeline-icon"></span>
+    <h3>Title</h3>
+  <p>Lorem ipsum dolor sit amet consiquest dio. Lorem ipsum dolor sit amet consiquest dio. Lorem ipsum dolor sit amet consiquest dio</p>
+      </div>
+    </div>
+  </div>
+  </article>
+  <article class="timeline-item alt">
+  <div class="timeline-desk">
+    <div class="panel">
+      <div class="panel-body">
+    <span class="arrow-alt"></span>
+  <span class="timeline-icon"></span>
+  <h3>Title</h3>
+  <p>Lorem ipsum dolor sit amet consiquest dio. Lorem ipsum dolor sit amet consiquest dio. Lorem ipsum dolor sit amet consiquest dio</p>
+      </div>
+    </div>
+  </div>
+  </article>
+  <article class="timeline-item">
+  <div class="timeline-desk">
+    <div class="panel">
+      <div class="panel-body">
+  <span class="arrow"></span>
+  <span class="timeline-icon"></span>
+  <h3>Title</h3>
+  <p>Lorem ipsum dolor sit amet consiquest dio. Lorem ipsum dolor sit amet consiquest dio. Lorem ipsum dolor sit amet consiquest dio</p>
+        </div>
+      </div>
+  </div>
+  </article>
+  <article class="timeline-item alt">
+    <div class="timeline-desk">
+      <div class="panel">
+        <div class="panel-body">
+  <span class="arrow-alt"></span>
+  <span class="timeline-icon"></span>
+  <h3>Title</h3>
+  <p>Lorem ipsum dolor sit amet consiquest dio. Lorem ipsum dolor sit amet consiquest dio. Lorem ipsum dolor sit amet consiquest dio</p>
+      </div>
+    </div>
+  </div>
+  </article>
+  </div>
+</div> 
+
 <section class="footer">
-  <div id="footer" style="height: 4rem;width:100% ;background-color:#062e51; ">
-      <p class="text-center" style="color: whitesmoke; padding-top:1.1rem; ">Telif Hakkı © 2020-2021 MKCBlog. Tüm Hakları Saklıdır.</p>
+  <div id="footer">
+      <p id="copyrights" class="text-center">Telif Hakkı © 2020-2021 MKCBlog. Tüm Hakları Saklıdır.</p>
   </div>
 
 </section>
