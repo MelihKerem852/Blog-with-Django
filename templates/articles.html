@@ -1,7 +1,15 @@
 {% extends "layout.html" %}
 {% block body %}
+ <div class="col-md-10 m-5 search ">
+    <form>
+        {% csrf_token %} 
+        <input type="text" name = "keyword" class="input-sm search-area" maxlength="80" placeholder="Ara...">
+        <button type="submit" class="btn btn-danger btn-sm search-btn">Ara</button>
+    </form>
+    </div>
 <h3>  Makalaler  </h3>
 {% if articles %}
+<div class="table">
 <table class="table table-striped table-hover">
   <thead>
     <tr>
@@ -24,11 +32,17 @@
   </tbody>
 </table>
 {% else %}
+ <div class="col-md-10 m-5 search">
+    <form>
+        {% csrf_token %} 
+        <input type="text" name = "keyword" class="input-sm search-area" maxlength="80"  placeholder="Ara...">
+        <button type="submit" class="btn btn-danger btn-sm search-btn" >Ara</button>
+    </form>
+    </div>
     <div class="alert alert-danger">Bu Blgota Henüz Bir Makale Bulunmuyor!</div>
 {% endif %}
+</div>
 
-
-<br><br><br><br><br><br><br><br><br><br>
 
 
 {% endblock body %}

@@ -195,3 +195,17 @@ a:hover{
   margin-left: 0;
   margin-right: 25px;
 }
+.giris-btn{
+  width:8rem;
+  margin-left: 13rem;
+}
+.articles2{
+  margin-left:50px;
+}
+.search-area{
+  width:25rem;
+}
+.search-btn{
+  margin-bottom:5px;
+  width:4rem
+}

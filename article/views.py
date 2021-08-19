@@ -1,4 +1,4 @@
-from django.http import request
+from django.http import request, response
 from django.shortcuts import render,redirect,get_object_or_404,HttpResponseRedirect,reverse
 from .forms import ArticleForm
 from .models import Article,Comment
@@ -6,15 +6,22 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 
-def articles(request):
-    
+def articles(response):
+    keyword= response.GET.get("keyword")
+    if keyword:
+        articles=Article.objects.filter(title__contains = keyword)
+        return render(response,"articles.html",{"articles":articles})
     articles= Article.objects.all()
-    return render(request,"articles.html",{"articles":articles})
+    return render(response,"articles.html",{"articles":articles})
 
 
-def articles2(requset):
+def articles2(response):
+    keyword= response.GET.get("keyword")
+    if keyword:
+        articles=Article.objects.filter(title__contains = keyword)
+        return render(response,"articles2.html",{"articles":articles})
     articles = Article.objects.all()
-    return render(requset,"articles2.html",{"articles":articles})
+    return render(response,"articles2.html",{"articles":articles})
 
 def userNotLogged(func):
     def _func(request, *args, **kwargs):

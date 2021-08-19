@@ -4,9 +4,18 @@
 
 
 {% if articles %}
+     <div class="col-md-10 m-5 search">
+    <form>
+        {% csrf_token %} 
+        <input type="text" name = "keyword" class="input-sm search-area" maxlength="80" placeholder="Ara...">
+        <button type="submit" class="btn btn-danger btn-sm search-btn">Ara</button>
+    </form>
+    </div>
+ 
     {% for article in articles %}
-    
-            <div class="row" style="margin-left:50px;">
+   
+
+            <div class="row" >
                             <div class="col-lg-11">
                                 <!-- Post content-->
                                 <article>
@@ -45,7 +54,14 @@
             <br>
     {% endfor %}
 {% else %}
-<div class ="alert alert-danger">Bu Blogta Henüz Bir Makale Bulunmamaktadır</div>
+ <div class="col-md-10 m-5 ">
+    <form>
+        {% csrf_token %} 
+        <input type="text" name = "keyword" class="input-sm" maxlength="80" style="width:25rem" placeholder="Ara...">
+        <button type="submit" class="btn btn-danger btn-sm" style="margin-bottom:5px;width:4rem">Ara</button>
+    </form>
+    </div>
+<div class ="alert alert-danger">Makale Bulunamadı</div>
 {% endif %}
  
 

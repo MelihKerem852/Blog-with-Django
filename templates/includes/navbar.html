@@ -1,5 +1,5 @@
 
-<nav id ="navbar" class="navbar navbar-expand-lg navbar-dark ">
+<nav id ="navbar" class="navbar navbar-expand-lg navbar-dark " style="z-index: 3">
   <a class="navbar-brand" href="/">MKCBlog</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -8,7 +8,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent" ">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="{%url 'index'%}">Anasayfa <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{%url 'index'%}"><span class="navbar-text">Anasayfa</span><span class="sr-only">(current)</span></a>
       </li>
       <!--<li class="nav-item">
         <a class="nav-link" href="{% url 'about'%}">Hakkımda</a>
@@ -16,7 +16,7 @@
       
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Nedir?
+          <span class="navbar-text">Nedir?</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/articles/article/14">Kontrol Paneli Nedir?</a>
@@ -26,25 +26,25 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link link" href="/articles/article/19">Bir Web Sitesinde Neler Olmalı?</a>
+        <a class="nav-link link" href="/articles/article/19"><span class="navbar-text">Bir Web Sitesinde Neler Olmalı?</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'article:articles' %}">Bütün Makaleler</a>
+        <a class="nav-link" href="{% url 'article:articles' %}"><span class="navbar-text">Bütün Makaleler</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'article:articles2' %}">Makaleler</a>
+        <a class="nav-link" href="{% url 'article:articles2' %}"><span class="navbar-text">Makaleler</span></a>
       </li>
       
     </ul>
 
     <ul id="nav-list" class="navbar-nav ml-auto">
     {% if request.user.is_authenticated %}
-      <li class="nav-item active nav-links"><a href="{% url 'article:dashboard' %}" style="margin:5px 10px; color:white; text-decoration:none;">Konrol Paneli</a></li>
-      <li class="nav-item active nav-links"><a href="{% url 'user:logout' %}" style="margin:5px 10px; color:white; text-decoration:none;">Çıkış Yap</a></li>
+      <li class="nav-item active nav-links giris-cıkıs"><a href="{% url 'article:dashboard' %}" style="margin:5px 10px; color:white; text-decoration:none;"><span class="navbar-text">Konrol Paneli</span></a></li>
+      <li class="nav-item active nav-links giris-cıkıs"><a href="{% url 'user:logout' %}" style="margin:5px 10px; color:white; text-decoration:none;"><span class="navbar-text">Çıkış Yap</span></a></li>
      
     {% else %}
-      <li class="nav-item active nav-links"><a href="{% url 'user:login' %}" style="margin:5px 10px; color:white; text-decoration:none;">Giriş Yap</a></li>
-      <li class="nav-item active nav-links"><a href="{% url 'user:register' %}"style="margin:5px 10px; color:white; text-decoration:none;">Kayıt Ol</a></li>
+      <li class="nav-item active nav-links giris-cıkıs"><a href="{% url 'user:login' %}" style="margin:5px 10px; color:white; text-decoration:none;"><span class="navbar-text">Giriş Yap</span></a></li>
+      <li class="nav-item active nav-links giris-cıkıs"><a href="{% url 'user:register' %}"style="margin:5px 10px; color:white; text-decoration:none;"><span class="navbar-text">Kayıt Ol</span></a></li>
     
   {% endif %}
     </ul>

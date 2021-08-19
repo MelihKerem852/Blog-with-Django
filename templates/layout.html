@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="shortcut icon" href="{% static 'favicon.png' %}">
+    <!--Telefon Responsive-->
+    <link rel="stylesheet" media="(max-width:500px)" href="{% static 'telefon.css' %}"/>
     <title>MKCBlog</title>
 </head>
 
@@ -36,12 +38,7 @@
  
 </div>
 {% block body2 %}
-<section class="footer">
-    <div id="footer" style="height: 4rem;width:100% ;background-color:#062e51; ">
-        <p class="text-center" style="color: whitesmoke; padding-top:1.1rem; ">Telif Hakkı © 2020-2021 MKCBlog Tüm Hakları Saklıdır.</p>
-    </div>
-  
-  </section>
+
 {% endblock %}
 
 

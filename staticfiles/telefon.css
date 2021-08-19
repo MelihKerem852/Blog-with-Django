@@ -1,0 +1,84 @@
+#training .items{
+    display: flex;
+    flex-direction: column;    
+}
+#training .items{
+    width: 100%;
+}
+#training .items .item{
+   width: 100%;
+}
+#training .items .item:hover{
+    color: rgb(177, 177, 177);
+    opacity: 0.6;
+}
+#training .items .item a .one-ciken-title{
+     color:whitesmoke;
+}
+#one-cikanlar{
+    color:whitesmoke;
+}
+#cards-section{
+    color:#fff;
+    padding:4rem;
+}
+#cards-section #cards{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+#cards-section #cards .card{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+#cards-section #cards .card .card-body .card-title{
+    color:black
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+    background-color: #062e51;
+}
+.giris-cıkıs{
+    background-color: #062e51;
+}
+.giris-btn{
+
+    position: absolute;
+    margin-left: 2.5rem;
+}
+#carouselExampleControls{
+    width:100%;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+.navbar-text{
+    margin-left: 10px;
+}
+.table{
+    margin-left: -10px;
+}
+.table td, .table th{
+    padding: 0%;
+    margin-left: -50px;
+}
+.form-outline{
+    width: 50%;
+}
+.search-area{
+    width:25rem;
+}
+.search-btn{
+    margin-bottom:20px;
+    width:4rem
+}
+.search-area{
+    margin:-2rem 0 -2rem -3rem;
+    width: 12rem;
+}
+.search-btn{
+    width:3rem;
+    margin-top: 1rem;
+}
